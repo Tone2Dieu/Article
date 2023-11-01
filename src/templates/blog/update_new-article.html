@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+
+
+{% block title  %}
+    <title>Article</title>
+{% endblock title  %}
+
+
+
+{% block content  %}
+    <section>
+        <div class="btn-actions">
+            
+            {% if post  %}
+            <a href="{% url 'article' slug=post.slug %}"><button>Anuller</button></a>
+            {% else %}
+            <a href="{% url 'articles' %}"><button>Anuller</button></a>
+            {% endif %}
+                
+            
+        </div>
+        <article>
+     
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit"> {{submit}} </button>
+            </form>
+        </article>
+    </section>
+{% endblock content  %}

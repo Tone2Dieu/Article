@@ -1,0 +1,84 @@
+
+p{
+    font-size: 25px !important;
+}
+
+header{
+    padding: 15px !important;
+}
+
+header > h1{
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: center !important;
+}
+
+nav > p{
+    margin: 0 20px;
+
+}
+
+p > a{
+    color: white;
+}
+
+.present{
+    background-image: url('images/lac.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section{
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 10px !important;
+    align-items: center;
+}
+article > a{
+    align-self: flex-start;
+}
+
+.image{
+    width: 60%;
+    align-self: flex-start;
+    /* border: 1px solid #000; */
+    display:flex ;
+    justify-content: space-around;
+}
+
+.btn-actions{
+    display: flex;
+
+}
+
+.btn-actions > a{
+    margin: 0 20px;
+}
+button{
+    border: none !important;
+}
+.supp{
+    background-color: #AF0404;
+}
+
+form{
+
+    width: 70%;
+    padding: 30px;
+    background-color: #17223B;
+    border-radius: 15px;
+}

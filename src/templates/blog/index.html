@@ -1,0 +1,17 @@
+{% extends './base.html' %}
+
+
+{% block title  %}
+    <title>Home</title>
+{% endblock title  %}
+
+
+
+{% block content  %}
+    <div class="present">
+        <h1>Bienvenue sur mon site</h1>
+        <h2>Nous somme aujourd'hui le {{date | date}} </h2>
+        <h2>Il est actuellement {{date | time }} </h2>
+    </div>
+{% endblock content  %}
+    

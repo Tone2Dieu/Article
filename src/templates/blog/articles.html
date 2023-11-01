@@ -1,0 +1,29 @@
+{% extends './base.html' %}
+
+
+{% block title  %}
+    <title>Articles</title>
+{% endblock title  %}
+
+
+
+{% block content  %}
+    <section>
+        <h1>Liste Articles</h1>
+        
+        {% if posts  %}
+            
+            {% for post  in posts %}
+                <article>
+                    <a href="{% url 'article' slug=post.slug %}">
+                        <h2> {{post.title}} </h2>
+                    </a>
+                    <p> {{post.content | truncatewords:30}} </p>
+                </article>
+            {% endfor %}
+        {% else %}
+                <h2> Il n'a pas d'article disponible </h2>
+        {% endif %}
+            
+    </section>
+{% endblock content  %}

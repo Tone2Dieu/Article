@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+
+
+{% block title  %}
+    <title>Article</title>
+{% endblock title  %}
+
+
+
+{% block content  %}
+    <section>
+        <div class="btn-actions">
+            <a href="{% url 'articles' %}"><button>Retour</button></a>
+            <a href="{% url 'update' slug=post.slug %}"><button>Modifier</button></a>
+            <a href="{% url 'delete' slug=post.slug %}"><button class="supp">Supprimer</button></a>
+        </div>
+        <article>
+            
+            {% if not post.image %}
+                <h1> {{post.title}} </h1>
+            {% else %}
+            <div class="image">
+                <img src=" {{post.image.url}} " alt=" {{post.title}} " width="250" height="200">
+                <h1> {{post.title}} </h1>
+            </div>
+            {% endif %}
+                
+            
+            <p> {{post.publier}} </p>
+            <p> {{post.content}} </p>
+        </article>
+    </section>
+{% endblock content  %}
